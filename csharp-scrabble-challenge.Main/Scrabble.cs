@@ -21,9 +21,10 @@ namespace csharp_scrabble_challenge.Main
 
         public Scrabble(string word)
         {
-            _word = word;
+            _word = word.ToLower();
         }
-        /*
+        
+        
         public int score()
         {
             int _score = 0;
@@ -42,7 +43,7 @@ namespace csharp_scrabble_challenge.Main
                 if (c == '{')
                 {
                     open2x++;
-                    _multiplier = 2;
+                    _multiplier *= 2;
                 }
                 else if (c == '}')
                 {
@@ -51,12 +52,12 @@ namespace csharp_scrabble_challenge.Main
                         return 0;
                     }
                     open2x--;
-                    _multiplier = 1;
+                    _multiplier /= 2;
                 }
                 else if (c == '[')
                 {
                     open3x++;
-                    _multiplier = 3;
+                    _multiplier *= 3;
                 }
                 else if (c == ']')
                 {
@@ -65,7 +66,7 @@ namespace csharp_scrabble_challenge.Main
                         return 0;
                     }
                     open3x--;
-                    _multiplier = 1;
+                    _multiplier /= 3;
                 }
                 else if (myDictionary.KeyIsContained(char.ToLower(c)))
                 {
@@ -84,9 +85,10 @@ namespace csharp_scrabble_challenge.Main
             
             return _score;
         }
-        */
-       
         
+        
+       
+        /*
         public int score()
         {
             
@@ -127,6 +129,13 @@ namespace csharp_scrabble_challenge.Main
                 return multiplier * myDictionary.GetValue(subString[0]) + ScoreRecursive(subString.Substring(1));
             }
         }
-    }
+
+
+
+        */
+    
+
+
+}
 }
 
