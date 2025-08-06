@@ -46,7 +46,7 @@ namespace csharp_scrabble_challenge.Main
         {
             if (!dictionary.ContainsKey(c))
             {
-                return -1;
+                return 0;
             }
             return dictionary[char.ToLower(c)];
         }
